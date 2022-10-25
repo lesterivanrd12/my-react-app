@@ -3,7 +3,7 @@ import Header from './Components/Header';
 import Employees from './Pages/Employees';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Customers from './Pages/Customers';
-import Dictionary from './Components/Dictionary';
+import Dictionary from './Pages/Dictionary';
 
 function App() {
   
