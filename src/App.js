@@ -4,10 +4,9 @@ import Employees from './Pages/Employees';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Customers from './Pages/Customers';
 import Dictionary from './Pages/Dictionary';
+import Definition from './Pages/Definition';
 
 function App() {
-  
-
   return (
       <BrowserRouter>
         <Header>
@@ -15,6 +14,7 @@ function App() {
             <Route path='/employees' element={<Employees />} />
             <Route path='/customers' element={<Customers />} />
             <Route path='/dictionary' element={<Dictionary />} />
+            <Route path='/definition' element={<Definition />} />
           </Routes>
         </Header>
       </BrowserRouter>
