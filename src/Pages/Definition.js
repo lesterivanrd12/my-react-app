@@ -11,6 +11,7 @@ function Definition() {
             .then((response) => response.json())
             .then((data) => {
                 setWord(data[0].meanings)
+                // console.log(data[0].meanings)
             });
     }, []);
 
