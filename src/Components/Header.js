@@ -36,13 +36,13 @@ export default function Header(props) {
                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                   <div className="flex flex-shrink-0 items-center">
                     <img
-                      className="block h-8 w-auto lg:hidden"
-                      src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                      className="block h-10 w-auto lg:hidden"
+                      src="https://i.pinimg.com/originals/f2/87/12/f287122744d914997e7e2b690b1f6706.png"
                       alt="Your Company"
                     />
                     <img
-                      className="hidden h-8 w-auto lg:block"
-                      src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                      className="hidden h-10 w-auto lg:block"
+                      src="https://i.pinimg.com/originals/f2/87/12/f287122744d914997e7e2b690b1f6706.png"
                       alt="Your Company"
                     />
                   </div>
@@ -72,7 +72,7 @@ export default function Header(props) {
                   </button>
 
                   {/* Profile dropdown */}
-                  <Menu as="div" className="relative ml-3">
+                  {/* <Menu as="div" className="relative ml-3">
                     <div>
                       <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                         <span className="sr-only">Open user menu</span>
@@ -125,7 +125,7 @@ export default function Header(props) {
                         </Menu.Item>
                       </Menu.Items>
                     </Transition>
-                  </Menu>
+                  </Menu> */}
                 </div>
               </div>
             </div>
@@ -133,6 +133,7 @@ export default function Header(props) {
             <Disclosure.Panel className="sm:hidden">
               <div className="space-y-1 px-2 pt-2 pb-3">
                 {navigation.map((item) => (
+                  <>
                   <NavLink
                     key={item.name}
                     to={item.href}
@@ -142,18 +143,19 @@ export default function Header(props) {
                   >
                     {item.name}
                   </NavLink>
-                  // <Disclosure.Button
-                  //   key={item.name}
-                  //   as="a"
-                  //   href={item.href}
-                  //   className={classNames(
-                  //     item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                  //     'block px-3 py-2 rounded-md text-base font-medium'
-                  //   )}
-                  //   aria-current={item.current ? 'page' : undefined}
-                  // >
-                  //   {item.name}
-                  // </Disclosure.Button>
+                    {/* <Disclosure.Button
+                      key={item.name}
+                      as="a"
+                      href={item.href}
+                      className={classNames(
+                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                        'block px-3 py-2 rounded-md text-base font-medium'
+                      )}
+                      aria-current={item.current ? 'page' : undefined}
+                    >
+                      {item.name}
+                    </Disclosure.Button> */}
+                    </>
                 ))}
               </div>
             </Disclosure.Panel>
