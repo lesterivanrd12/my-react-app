@@ -1,6 +1,8 @@
 
 export default function NotFound () {
     return(
-        <p>Resource not found.</p>
+        <>
+            <h1>404 page not found.</h1>
+        </>
     );
 }
