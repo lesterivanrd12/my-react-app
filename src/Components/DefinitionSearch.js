@@ -12,13 +12,13 @@ export default function DefinitionSearch() {
             navigate('/dictionary/' + word);
         }}>
             <input
-                className="shrink min-w-0 px-2 py-1 rounded"
+                className="shrink min-w-0 px-3 py-2 rounded"
                 placeholder="Volcano"
                 type='text'
                 onChange={(e) => {
                 setWord(e.target.value);
             }} />
-            <button className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-1 px-1 rounded">Search</button>
+            <button className="bg-purple-500 hover:bg-purple-700 text-white font-bold px-6 py-2 rounded">Search</button>
         </form>
     );
 }
