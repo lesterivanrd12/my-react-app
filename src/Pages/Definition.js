@@ -55,7 +55,7 @@ function Definition() {
                         </p>
                     );
                 })}
-                <p>Search Again:</p>
+                <p>Search More:</p>
                 <DefinitionSearch />
                 </>
             ) : null }
