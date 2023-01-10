@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router";
+import { redirect, useNavigate, useParams } from "react-router";
 import {v4 as uuidv4} from 'uuid';
 import { Link } from "react-router-dom";
 import NotFound from "../Components/NotFound";
 import DefinitionSearch from "../Components/DefinitionSearch";
+import ServerError from "../Components/ServerError";
 
 function Definition() {
     const [word, setWord] = useState();
@@ -12,18 +13,19 @@ function Definition() {
     const navigate = useNavigate();
     let { search } = useParams();
 
+
     useEffect(() => {
         const url = 'https://api.dictionaryapi.dev/api/v2/entries/en/' + search;
-        const url1 = 'http://httpstat.us/501';
+        const url1 = 'http://httpstat.us/401';
         fetch(url)
             .then((response) => {
                 console.log(response.status);
                 if (response.status === 404) {
                     setNotFound(true);
                 } else if (response.status === 401){
-                    navigate('/login');
+                    redirect('/login');
                 } else if (response.status === 500) {
-                    // setServerError(true);
+                    setServerError(true);
                 }
                 return response.json()
             })
@@ -37,6 +39,13 @@ function Definition() {
         return (
             <>
                 <NotFound />
+                <Link to="/dictionary">Search another</Link>
+            </>
+        )
+    } else if (serverError === true) {
+        return (
+            <>
+                <ServerError />
                 <Link to="/dictionary">Search another</Link>
             </>
         )

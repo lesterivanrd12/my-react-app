@@ -8,6 +8,7 @@ const navigation = [
   { name: 'Customers', href: '/Customers'},
   { name: 'Dictionary', href: '/dictionary'},
   { name: 'Calendar', href: '/calendar'},
+  { name: 'Test', href: '/test'},
 ]
 
 function classNames(...classes) {
@@ -36,16 +37,19 @@ export default function Header(props) {
 
                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                   <div className="flex flex-shrink-0 items-center">
-                    <img
-                      className="block h-10 w-auto lg:hidden"
-                      src="https://i.pinimg.com/originals/f2/87/12/f287122744d914997e7e2b690b1f6706.png"
-                      alt="Your Company"
-                    />
-                    <img
-                      className="hidden h-10 w-auto lg:block"
-                      src="https://i.pinimg.com/originals/f2/87/12/f287122744d914997e7e2b690b1f6706.png"
-                      alt="Your Company"
-                    />
+                    <a href='/'>
+                      <img
+                        className="block h-10 w-auto lg:hidden"
+                        src="https://i.pinimg.com/originals/f2/87/12/f287122744d914997e7e2b690b1f6706.png"
+                        alt="Your Company"
+
+                      />
+                      <img
+                        className="hidden h-10 w-auto lg:block"
+                        src="https://i.pinimg.com/originals/f2/87/12/f287122744d914997e7e2b690b1f6706.png"
+                        alt="Your Company"
+                      />
+                    </a>
                   </div>
                   <div className="hidden sm:ml-6 sm:block">
                     <div className="flex space-x-4">

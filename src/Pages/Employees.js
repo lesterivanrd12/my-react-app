@@ -46,10 +46,10 @@ function Employees() {
   ]);
 
   // Function for updating employee data
-  function updateEmployee(id, newName, newRole) {
+  function updateEmployee(id, newName, newRole, newImg) {
     const updatedEmployee = employees.map((employee) => {
       if (id === employee.id) {
-        return { ...employee, name: newName, role: newRole };
+        return { ...employee, name: newName, role: newRole, img: newImg };
       }
 
       return employee;

@@ -8,8 +8,10 @@ import Definition from './Pages/Definition';
 import NotFound from './Components/NotFound';
 import Calendar from './Pages/Calendar';
 import Counter from './Components/Counter';
+import Home from './Pages/Home';
+import Test from './Pages/Test';
 
-function App() {
+export default function App() {
   return (
       <BrowserRouter>
         <Header>
@@ -20,6 +22,8 @@ function App() {
             <Route path='/dictionary/:search' element={<Definition />} />
             <Route path='/calendar' element={<Calendar /> } />
             <Route path='/counter' element={<Counter /> } />
+            <Route path='/test' element={<Test /> } />
+            <Route path='/' element={<Home />} />
             <Route path='/404' element={<NotFound />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
@@ -27,5 +31,3 @@ function App() {
       </BrowserRouter>
   );
 }
-
-export default App;

@@ -31,6 +31,8 @@ function AddEmployee(props) {
             setImg('');
             props.newEmployee(name, role, img);
           }} id="editmodal" className="w-full max-w-sm">
+
+            {/* Employee Fullname */}
             <div className="md:flex md:items-center mb-6">
               <div className="md:w-1/3">
                 <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="name">Full Name</label>
@@ -49,6 +51,7 @@ function AddEmployee(props) {
               </div>
             </div>
 
+            {/* Employee Role */}
             <div className="md:flex md:items-center mb-6">
               <div className="md:w-1/3">
                 <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="role">Role</label>
@@ -67,6 +70,7 @@ function AddEmployee(props) {
               </div>
             </div>
 
+            {/* Employee Image */}
             <div className="md:flex md:items-center mb-6">
               <div className="md:w-1/3">
                 <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="img">Image URL</label>
